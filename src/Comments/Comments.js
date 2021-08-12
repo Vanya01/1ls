@@ -1,9 +1,12 @@
-function getComments(){
-    return fetch('https://jsonplaceholder.typicode.com/comments')
-        .then(value => value.json())
+import {Comment} from "../Comment/Comment";
+
+export function Comments({comments}){
+    return (
+        <div>
+            {
+                comments.map(value => <Comment item={value}/> )
+            }
+        </div>
+
+    )
 }
-function getComment(id){
-    return fetch('https://jsonplaceholder.typicode.com/comments'+ id)
-        .then(value => value.json())
-}
-export {getComments,getComment}

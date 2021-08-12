@@ -1,16 +1,7 @@
-import {useEffect,useState} from "react";
-import {Components} from "../Components/Components";
-import {getComments} from "../Comments/Comments";
-export function Comment(){
-    let [comment,setComment] = useState([])
-    useEffect(()=>{
-        getComments().then( value => setComment([...value]))
-    },[])
+export function Comment({item}){
     return(
         <div>
-            {
-                comment.map(value => <Components user_item={value} key={value.id} />)
-            }
+            {item.body}
         </div>
     )
 }

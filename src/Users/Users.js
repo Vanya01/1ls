@@ -8,7 +8,6 @@ export function Users(){
 
     useEffect(()=>{
         getUsers().then(({data})=>setUsers([...data]))
-        // getUser().then(({data}) => setPosts([...data]))
     },[])
 
     return(

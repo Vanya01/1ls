@@ -1,8 +1,8 @@
 import {Address} from "../Address/Address";
 import {Posts} from '../Posts/Posts';
 import {useEffect, useState} from "react";
-import {getPostOfUser} from "../services/user.axios";
-
+import {getCommentsOfUser, getPostOfUser} from "../services/user.axios";
+import {Comments} from "../Comments/Comments";
 export function User({item,item:{address}}){
 
     let [posts,setPosts]=useState([])
@@ -11,6 +11,11 @@ export function User({item,item:{address}}){
         getPostOfUser(item.id).then(({data}) => setPosts([...data]))
     },[item.id])
 
+    let [comments,setComments]=useState([])
+
+    useEffect(()=>{
+        getCommentsOfUser(item.id).then(({data}) => setComments([...data]))
+    },[item.id])
 
 
 
@@ -21,7 +26,7 @@ export function User({item,item:{address}}){
             <Address address={address}/>
             <br/>
             <Posts posts={posts}/>
-
+            <Comments comments={comments}/>
         </div>
     )
 }
