@@ -1,19 +1,22 @@
-import {useEffect,useState} from "react";
-import {Components} from "../Components/Components";
-import {getUsers} from "../User/User.service";
+import {useEffect, useState} from "react";
+import {getUsers} from "../services/user.axios";
+import {User} from "../User/User";
+
 
 export function Users(){
-   let [users,setUsers] = useState([])
+ let [users,setUsers] = useState([])
+
     useEffect(()=>{
-      getUsers().then( value => setUsers([...value]))
+        getUsers().then(({data})=>setUsers([...data]))
+        // getUser().then(({data}) => setPosts([...data]))
     },[])
 
     return(
-
         <div>
             {
-                users.map(value => <Components item={value} key={value.id}/>)
+                users.map(value => <User item={value} key={value.id}/>)
             }
         </div>
     );
 }
+

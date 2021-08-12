@@ -1,15 +1,10 @@
 import './App.css';
-import './User/User.service';
 import './Users/Users';
 import {Users} from "./Users/Users";
-import {Post} from "./Post/Post";
-import {Comment} from "./Comment/Comment";
 
 function App() {
-    return (<div>
+    return (<div className={'Main_block'}>
             <Users/>
-            <Post/>
-            <Comment/>
         </div>
     )
 }

@@ -1,9 +1,11 @@
-function getPosts(){
-    return fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(value => value.json())
+import {Post} from '../Post/Post'
+
+export function Posts({posts}){
+    return(
+        <div>
+            {
+                posts.map(value => <Post item={value} />)
+            }
+        </div>
+    )
 }
-function getPost(id){
-    return fetch('https://jsonplaceholder.typicode.com/posts'+id)
-        .then(value => value.json())
-}
-export {getPosts,getPost}

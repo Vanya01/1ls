@@ -9,7 +9,7 @@ export function Comment(){
     return(
         <div>
             {
-                comment.map(value => <Components item={value} key={value.id} />)
+                comment.map(value => <Components user_item={value} key={value.id} />)
             }
         </div>
     )
