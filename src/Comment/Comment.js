@@ -1,7 +1,7 @@
-export function Comment({item}){
-    return(
-        <div>
-            {item.body}
-        </div>
-    )
-}
+// export function Comment({item}){
+//     return(
+//         <div>
+//             {item.body}
+//         </div>
+//     )
+// }

@@ -4,3 +4,15 @@
     flex-wrap: wrap;
     justify-content:center;
 }
+
+.main_wrap{
+    display: flex;
+    margin: 5%;
+    align-items: center;
+    padding-left: 5%;
+}
+.wrap_one{
+    margin-left: 2%;
+    max-width: 500px;
+    max-height: 500px;
+}
