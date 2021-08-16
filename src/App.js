@@ -1,12 +1,10 @@
 import './App.css';
 import './Users/Users';
-import {Users} from "./Users/Users";
+import {Control} from "./Info/Info";
 
 function App() {
-    return (<div className={'Main_block'}>
-
-            <Users/>
-
+    return (<div className={'App'}>
+            <Control/>
         </div>
     )
 }
