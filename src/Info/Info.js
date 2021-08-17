@@ -10,7 +10,6 @@ export function Control(){
     let [price,setPrice] = useState('Price')
     let [car,setCar] = useState({model:'', price:'',id:'',year:''})
 
-
      let [cars,setCars] = useState([])
     useEffect( () => {
         getCars().then(value => setCars([...value]))
@@ -65,14 +64,14 @@ export function Control(){
 
             </form>
 
-            <div>{JSON.stringify(car)}</div>
+            <div>
+                <h3>Add your car</h3>
+                {JSON.stringify(car)}
+            </div>
 
           <div>
               {cars.map(value => <Carlist newValue={value} key={value.id}/>)}
-        </div>
-
-            <div> </div>
-
+          </div>
 
         </div>
     )

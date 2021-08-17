@@ -9,7 +9,63 @@
 .list{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    border: 2px solid royalblue;
+    background: #61dafb;
+    max-width: 40%;
 }
+.wrap_last{
+    margin-left: 38%;
+}
+
+#edit_btn{
+    padding:15px;
+    border: 2px solid lightgoldenrodyellow;
+    background: navajowhite;
+    border-radius: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: limegreen;
+
+}
+
+#edit_btn:hover{
+    background:limegreen ;
+    color: navajowhite;
+    transition: 500ms;
+}
+
+#delete_btn:hover{
+    background:darkred ;
+    color: navajowhite;
+    transition: 500ms;
+}
+
+
+#delete_btn{
+    padding:15px;
+    border: 2px solid lightgoldenrodyellow;
+    background: navajowhite;
+    border-radius: 15px;
+    margin-right: 15px;
+    color: darkred;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.wrap_two{
+    text-align: center;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
