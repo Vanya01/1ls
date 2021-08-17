@@ -4,7 +4,9 @@ import {Control} from "./Info/Info";
 
 function App() {
     return (<div className={'App'}>
-            <Control/>
+             <div className={'cars'}>
+                 <Control/>
+             </div>
         </div>
     )
 }

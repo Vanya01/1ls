@@ -1,5 +1,7 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {saveNewCar} from "./Put_new_car";
+import {Carlist} from "./carsList";
+import {getCars} from "./editing";
 
 export function Control(){
     let [year,setYear] = useState('Year');
@@ -7,21 +9,27 @@ export function Control(){
     let [id,setId] = useState('Id')
     let [price,setPrice] = useState('Price')
     let [car,setCar] = useState({model:'', price:'',id:'',year:''})
+
+
+     let [cars,setCars] = useState([])
+    useEffect( () => {
+        getCars().then(value => setCars([...value]))
+    },[])
+
     let empty = {}
 
    const onSubmitForm = (e) => {
         e.preventDefault()
+
         let tempCar = {id,price,model,year}
         saveNewCar(tempCar)
         setCar({...tempCar})
-       }
-
+   }
 
     const changeModel = (e) => {
            let model = e.target.value
            setModel(e.target.value)
-        empty.model = model
-
+           empty.model = model
     }
     const changePrice = (e) => {
         let price = e.target.value
@@ -39,22 +47,33 @@ export function Control(){
         empty.year = year
     }
 
+
+
     return (
         <div>
             <form onSubmit={onSubmitForm} >
 
-                <input type="text" name={'Model'} value={model} maxlength={20} onInput={changeModel}/>
+                <input type="text" name={'Model'} placeholder={model} maxLength={20} onInput={changeModel}/>
 
-                <input type="text" name={'Price'} value={price} min={0}  onInput={changePrice}/>
+                <input type="text" name={'Price'} placeholder={price}   onInput={changePrice}/>
 
-                <input type="text" id={'Id'} value={id}  onInput={changeId}/>
+                <input type="text" id={'Id'} placeholder={id}  onInput={changeId}/>
 
-                <input type="text" name={'Year'} value={year} min={1990} max={2021}   onInput={changeYear}/>
+                <input type="text" name={'Year'} placeholder={year} min={1990} max={2021}   onInput={changeYear}/>
 
                 <input type="submit" value={'Add new car'}/>
 
             </form>
+
             <div>{JSON.stringify(car)}</div>
+
+          <div>
+              {cars.map(value => <Carlist newValue={value} key={value.id}/>)}
+        </div>
+
+            <div> </div>
+
+
         </div>
     )
 }
