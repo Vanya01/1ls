@@ -35,14 +35,14 @@ export function NewForm({newValue}){
     return (
         <div>
             <form onSubmit={onSubmitForm} >
+                {/*or in the placeholder could be newValue.model */}
+                <input type="text" name={'Model'} placeholder={'Change model'} maxLength={20} onInput={changeModel}/>
 
-                <input type="text" name={'Model'} placeholder={newValue.model} maxLength={20} onInput={changeModel}/>
+                <input type="text" name={'Price'} placeholder={'Change year'}   onInput={changePrice}/>
 
-                <input type="text" name={'Price'} placeholder={newValue.price}   onInput={changePrice}/>
+                <input type="text" name={'Year'} placeholder={'Change year'} min={1990} max={2021}   onInput={changeYear}/>
 
-                <input type="text" name={'Year'} placeholder={newValue.year} min={1990} max={2021}   onInput={changeYear}/>
-
-                <input type="submit" value={'Add new car'}/>
+                <input type="submit" value={'Edit this car'}/>
 
             </form>
 

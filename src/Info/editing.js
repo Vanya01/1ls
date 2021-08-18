@@ -1,19 +1,19 @@
 function Controling({all}){
-        fetch('http://192.168.1.253/api/v1/cars'
+        fetch('http://195.72.146.25/api/v1/cars'
         )
             .then((response) => response.json())
             .then((all_cars) => console.log(all_cars));
 }
 
  function getCars(){
-       return fetch('http://192.168.1.253/api/v1/cars')
+       return fetch('http://195.72.146.25/api/v1/cars')
             .then(listOne => listOne.json())
 
 }
 
 
 function DeleteCar(id){
-   return  fetch(`http://192.168.1.253/api/v1/cars/${id}` , {
+   return  fetch(`http://195.72.146.25/api/v1/cars/${id}` , {
         method:'DELETE'
     })
 }

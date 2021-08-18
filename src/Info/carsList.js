@@ -7,8 +7,8 @@ export function Carlist({newValue}){
     return(
         <div className={'wrap_last'}>
 
-            <div className="list"> <div className="wrap_two"><h2>{newValue.id} - {newValue.model}</h2>
-                <p>{newValue.price} - {newValue.year}</p>
+            <div className="list"> <div className="wrap_two"><h2>ID - {newValue.id} <br/> Model - {newValue.model}</h2>
+                <p>Price - {newValue.price} <br/> Year - {newValue.year}</p>
             </div>
                 <div className="wrap">
 
