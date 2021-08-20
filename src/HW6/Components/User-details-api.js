@@ -8,8 +8,9 @@ export function UsersAPI(props){
         getUser(id).then(value => setUser({...value}))
     },[id])
     return(
-        <div>{
-            JSON.stringify(user)
-        }</div>
+        <div>
+            <h1>{user.id} - {user.name}</h1>
+            <p>{user.email} - {user.phone}</p>
+        </div>
     )
 }

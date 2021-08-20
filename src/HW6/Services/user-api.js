@@ -10,4 +10,7 @@ const getUser =(id)=>{
         .then(value => value.json())
 }
 
+
+
+
 export {getUsers,getUser}
