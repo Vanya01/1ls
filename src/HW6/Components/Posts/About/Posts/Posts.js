@@ -3,6 +3,7 @@ import {getPosts} from "../../../../Services/posts-api";
 import Post from "../Post/Post";
 import {Route} from "react-router-dom";
 import {PostAPI} from "./post-details-api";
+import 'G:/react-1ls/1ls/src/App.css'
 
 
 export default function Posts(props){
@@ -18,11 +19,13 @@ export default function Posts(props){
     },[])
 
     return(
-        <div>
+        <div className={'main_post_wrap'}>
+        <Route path={`${url}/:id`} render={(props) => <PostAPI{...props}/>}/>
+            <div className={'more_wrap'}>
         {
             posts.map(value=> <Post history={history} item={value} key={value.id} />)
         }
-        <Route path={`${url}/:id`} render={(props) => <PostAPI{...props}/>}/>
+            </div>
         </div>
     )
 }

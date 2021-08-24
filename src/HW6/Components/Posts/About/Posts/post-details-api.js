@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {getPost} from "../../../../Services/posts-api";
+import 'G:/react-1ls/1ls/src/App.css'
 
 
 export function PostAPI(props){
@@ -9,10 +10,11 @@ export function PostAPI(props){
     useEffect(()=>{
         getPost(id).then(value => setPost({...value}))
     },[id])
-     console.log(post)
     return(
-        <div>
-            <h1>{post.id} - {post.title}</h1>
+        <div className={'posts_info'}>
+            <h1>ID: {post.id}</h1>
+            <br/>
+            <p>Post title: {post.title}</p>
         </div>
     )
 

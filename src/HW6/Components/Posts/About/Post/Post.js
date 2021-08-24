@@ -3,7 +3,7 @@ import {
     withRouter,
 
 } from "react-router-dom";
-
+import 'G:/react-1ls/1ls/src/App.css'
 
  function Post({item,history}){
 
@@ -12,8 +12,8 @@ import {
     }
 
     return(
-        <div>
-            Post number - {item.id}
+        <div className={'wrap_for_posts'}>
+                <p>Post number - {item.id}</p>
                 <button onClick={navigateToPost}>Post info</button>
         </div>
     )

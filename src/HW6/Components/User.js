@@ -3,14 +3,17 @@ import {
 
 } from "react-router-dom";
 
+import 'G:/react-1ls/1ls/src/App.css'
+
 
 function User({item,history}){
     const navigateToUser =()=>{
         history.push(`/users/${item.id}`)
     }
     return(
-        <div>
-            {item.name} - <button onClick={navigateToUser}>User info</button>
+        <div className={'Wrap_users'}>
+            <p>{item.name} -</p>
+                <button className={'usersBTN'} onClick={navigateToUser}>User info</button>
         </div>
     )
 }
