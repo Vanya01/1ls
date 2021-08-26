@@ -1,3 +1,50 @@
-.all_simpsons{
-    display: flex;
+.main_wrap{
+    background: skyblue;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+
+}
+.main_wrap>h3{
+    padding-top: 50px;
+    color: royalblue;
+}
+.main_wrap>p{
+    padding-top: 50px;
+    color: lightgoldenrodyellow;
+    font-weight: bold;
+}
+
+.btn1{
+    padding: 30px;
+    font-weight: bold;
+    color: crimson;
+    background: moccasin;
+    border: 2px solid lightgoldenrodyellow;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.btn2{
+    padding: 30px;
+    font-weight: bold;
+    color: crimson;
+    background: moccasin;
+    border: 2px solid lightgoldenrodyellow;
+    border-radius: 10px;
+}
+.btn1:hover{
+    color: moccasin;
+    background: crimson;
+    border: 2px solid lightgoldenrodyellow;
+    transition: 600ms;
+    cursor: pointer;
+}
+.btn2:hover{
+    color: moccasin;
+    background: crimson;
+    border: 2px solid lightgoldenrodyellow;
+    transition: 600ms;
+    cursor: pointer;
 }
