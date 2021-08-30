@@ -1,3 +1,38 @@
-.all_simpsons{
-    display: flex;
+.mainDiv{
+    background: skyblue;
+    margin: 0 auto;
+    width: 400px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.btn_add{
+    padding: 10px;
+    margin: 10px 10px 20px 10px;
+    font-weight: bold;
+    color: crimson;
+    background: moccasin;
+    border: 2px solid lightgoldenrodyellow;
+    border-radius: 10px;
+}
+
+.btn_add:hover{
+    color: moccasin;
+    background: crimson;
+    border: 2px solid lightgoldenrodyellow;
+    transition: 600ms;
+    cursor: pointer;
+}
+
+.form{
+    padding: 10px;
+    background: lightcyan;
+    border-radius: 10px;
+    border: 2px solid lightgoldenrodyellow;
+}
+
+.usersDiv{
+    font-weight: bold;
+    color: crimson;
+    padding: 5px;
 }
